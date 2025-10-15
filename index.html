@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive template using tailwind css</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <!-- Font setup -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Marcellus&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: "Marcellus", serif;
+    }
+
+    .lato {
+      font-family: "Lato", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="bg-[#EEF5F8] py-4">
+    <nav class="container mx-auto px-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="./assets/logo.png" alt="Logo" class="h-10 w-10 border border-blue-500 rounded-full p-1" />
+        <span class="text-xl md:text-2xl lg:text-[36px] text-[#519DBC]">APHRODITE</span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center space-x-10 text-sm lg:text-xl font-medium lato">
+        <li class="relative">
+          <a href="#" class="text-[#519DBC]">
+            HOME
+            <span class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-blue-600 block"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-[#ADADAD] hover:text-blue-600 transition">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#ADADAD] hover:text-blue-600 transition">SERVICE</a>
+        </li>
+        <li class="relative">
+          <a href="#" class="flex items-center space-x-1 text-[#ADADAD] hover:text-blue-600 transition">
+            <span>PAGES</span>
+            <i class="fas fa-chevron-down text-xs"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Call Icon (desktop only) -->
+      <div class="hidden md:flex">
+        <a href="#" class="p-2 border border-[#519DBC] rounded-full text-[#519DBC] hover:bg-indigo-100 transition">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Icon -->
+      <div class="md:hidden text-[#519DBC] text-xl">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+  <section class="bg-[#EEF5F8] py-20 lg:py-28 xl:py-32">
+    <div class="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <p class="text-[#25B8AF] text-xl lg:text-2xl uppercase tracking-widest font-light mb-4">
+          The Beauty Center
+        </p>
+
+        <h1 class="text-5xl md:text-7xl lg:text-8xl xl:text-[108px] text-[#1A1A1A] font-bold leading-none mb-8">
+          Suitable For All<br class="hidden xl:inline" />Skin Problems
+        </h1>
+
+        <div class="flex items-center justify-center lg:justify-start gap-4 mb-8">
+          <a href="#"
+            class="px-8 py-3 border-2 border-[#25B8AF] text-[#25B8AF] rounded-full font-semibold hover:bg-[#25B8AF] hover:text-white transition duration-300 shadow-lg">
+            Book Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </a>
+          <span class="text-gray-500 font-medium">OR</span>
+          <button
+            class="w-14 h-14 rounded-full bg-[#25B8AF] text-white flex items-center justify-center text-xl hover:bg-teal-600 transition shadow-xl">
+            <i class="fas fa-play"></i>
+          </button>
+        </div>
+
+        <div
+          class="border-t border-gray-300 pt-5 text-gray-600 text-base flex items-start gap-3 max-w-lg mx-auto lg:mx-0">
+          <i class="fas fa-arrow-right text-sm pt-1 text-[#25B8AF]"></i>
+          <p>Care for skin and natural beauty through professional treatments using natural products</p>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 relative">
+        <img src="./assets/anthetsdsg-sdg.png" alt="Beauty Model" class="w-full h-auto object-cover rounded-xl" />
+
+        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-10">
+          <img src="./assets/horizontal.png" alt="Slide Indicator" class="w-24" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-[#25B8AF] text-xl lg:text-2xl uppercase tracking-widest font-light mb-4">
+        Our Services
+      </p>
+      <h2 class="text-4xl md:text-5xl lg:text-[60px] text-[#1A1A1A] font-bold mb-16">
+        Beauty Rituals Of Our Offer
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8 items-start">
+        <div class="flex flex-col items-center text-center pt-8">
+          <img src="./assets/Inactive.png" alt="Facial Treatments Icon" class="w-20 h-20" />
+          <h3 class="text-xl lg:text-2xl text-[#25B8AF] font-semibold mb-3 pt-6">
+            Facial Treatments
+          </h3>
+          <p class="text-[#5C5C5C] text-lg max-w-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-2xl z-10 lg:-translate-y-12">
+          <img src="./assets/Active.png" alt="Skin Tightening Icon" class="w-24 h-24 -mt-16" />
+          <h3 class="text-xl lg:text-2xl text-[#519DBC] font-bold mb-3 pt-6">
+            Skin Tightening
+          </h3>
+          <p class="text-[#5C5C5C] text-lg mb-6 max-w-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <a href="#"
+            class="text-[#519DBC] text-lg font-semibold border-b-2 border-[#519DBC] hover:border-b-0 transition">Learn
+            More</a>
+        </div>
+
+        <div class="flex flex-col items-center text-center pt-8">
+          <img src="./assets/Icon.png" alt="Healthy Products Icon" class="w-20 h-20" />
+          <h3 class="text-xl lg:text-2xl text-[#FAA6A4] font-semibold mb-3 pt-6">
+            Healthy Products
+          </h3>
+          <p class="text-[#5C5C5C] text-lg max-w-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20 lg:py-28">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row items-stretch justify-between">
+      <div class="lg:w-1/2 flex flex-col justify-center text-center lg:text-left mb-10 lg:mb-0">
+        <div class="max-w-xl lg:max-w-none mx-auto lg:mx-0">
+          <p class="text-[#25B8AF] text-lg uppercase tracking-widest font-light mb-2">
+            About Us
+          </p>
+          <h2 class="text-4xl md:text-5xl lg:text-[60px] font-bold text-[#1A1A1A] mt-2 leading-tight">
+            Crafting Beauty Beyond Boundaries
+          </h2>
+          <p class="text-gray-600 mt-6 text-lg max-w-2xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <a href="#"
+            class="mt-8 inline-flex items-center bg-[#25B8AF] text-white py-3 px-8 rounded-full font-semibold hover:bg-teal-600 transition duration-300 shadow-md">
+            <i class="fas fa-arrow-right mr-3 text-sm"></i> Discover More
+          </a>
+        </div>
+      </div>
+      <div class="lg:w-1/2 relative bg-[#519DBC] py-12 lg:py-24 rounded-l-xl">
+        <div class="flex justify-center lg:justify-end gap-4 pr-0 md:pr-10 lg:pr-16">
+          <div class="relative -translate-y-6 lg:-translate-y-10">
+            <img src="./assets/about-n.png" alt="Facial Treatment" class="rounded-xl shadow-2xl w-40 md:w-56 lg:w-64" />
+          </div>
+          <div class="relative translate-y-6 lg:translate-y-10">
+            <img src="./assets/about-i.png" alt="Light Therapy" class="rounded-xl shadow-2xl w-40 md:w-56 lg:w-64" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cover bg-center py-20 lg:py-28 bg-no-repeat relative"
+    style="background-image: url('./assets/bg-.png')">
+    <div class="absolute inset-0 bg-[#1A1A1A]/50"></div>
+
+    <div class="relative container mx-auto text-white px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 text-center">
+        <div>
+          <p class="text-6xl md:text-7xl xl:text-[84px] font-extrabold text-[#25B8AF]">
+            20+
+          </p>
+          <p class="text-lg lg:text-2xl pt-4 font-light">Years Of Experience</p>
+        </div>
+
+        <div>
+          <p class="text-6xl md:text-7xl xl:text-[84px] font-extrabold text-[#25B8AF]">
+            769+
+          </p>
+          <p class="text-lg lg:text-2xl pt-4 font-light">Satisfied Clients</p>
+        </div>
+
+        <div>
+          <p class="text-6xl md:text-7xl xl:text-[84px] font-extrabold text-[#25B8AF]">
+            16+
+          </p>
+          <p class="text-lg lg:text-2xl pt-4 font-light">Skin Treatments</p>
+        </div>
+
+        <div>
+          <p class="text-6xl md:text-7xl xl:text-[84px] font-extrabold text-[#25B8AF]">
+            50+
+          </p>
+          <p class="text-lg lg:text-2xl pt-4 font-light">Trained Experts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-[#25B8AF] text-xl lg:text-2xl uppercase tracking-widest font-light mb-2">
+        Meet the Doctors
+      </p>
+      <h2 class="text-4xl md:text-5xl lg:text-[60px] text-[#1A1A1A] font-bold mb-16 pt-4">
+        Discover Our Experts
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div class="p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+          <img src="./assets/experts-i.png" alt="Dr. Hannah Wagner"
+            class="w-full h-96 xl:h-[500px] object-cover rounded-xl mb-4" />
+          <p class="text-xs lg:text-sm uppercase text-gray-500 tracking-wider py-2">
+            Plastic Surgeon
+          </p>
+          <h3 class="text-xl lg:text-2xl text-[#1A1A1A] font-semibold pb-4">
+            Dr. Hannah Wagner
+          </h3>
+        </div>
+
+        <div class="p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 relative overflow-hidden">
+          <div class="relative h-96 xl:h-[500px] rounded-xl overflow-hidden mb-4">
+            <img src="./assets/exprt-ns.png" alt="Dr. Bryan Hunter" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#519DBC] via-[#519DBC]/20 to-transparent"></div>
+          </div>
+          <p class="text-xs lg:text-sm uppercase text-[#25B8AF] tracking-wider py-2">
+            Anesthesiologist
+          </p>
+          <h3 class="text-xl lg:text-2xl text-[#1A1A1A] font-semibold pb-4">
+            Dr. Bryan Hunter
+          </h3>
+        </div>
+
+        <div class="p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+          <img src="./assets/exprts-m.png" alt="Dr. Sarah Nelson"
+            class="w-full h-96 xl:h-[500px] object-cover rounded-xl mb-4" />
+          <p class="text-xs lg:text-sm uppercase text-gray-500 tracking-wider py-2">
+            Dermatologist
+          </p>
+          <h3 class="text-xl lg:text-2xl text-[#1A1A1A] font-semibold pb-4">
+            Dr. Sarah Nelson
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-24 bg-gray-50">
+    <div
+      class="container mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center">
+      <img src="./assets/logoh/Item 1.png" alt="Brand Logo 1"
+        class="w-32 h-auto object-contain opacity-70 hover:opacity-100 transition" />
+      <img src="./assets/logoh/Item 2.png" alt="Brand Logo 2"
+        class="w-32 h-auto object-contain opacity-70 hover:opacity-100 transition" />
+      <img src="./assets/logoh/Item 3.png" alt="Brand Logo 3"
+        class="w-32 h-auto object-contain opacity-70 hover:opacity-100 transition" />
+      <img src="./assets/logoh/Item 4.png" alt="Brand Logo 4"
+        class="w-32 h-auto object-contain opacity-70 hover:opacity-100 transition hidden lg:block" />
+      <img src="./assets/logoh/Item 5.png" alt="Brand Logo 5"
+        class="w-32 h-auto object-contain opacity-70 hover:opacity-100 transition hidden lg:block" />
+    </div>
+  </section>
+
+  <section class="py-0 bg-white">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 items-center rounded-xl overflow-hidden shadow-2xl">
+        <div class="relative min-h-[450px] lg:h-full">
+          <img src="./assets/Video.png" alt="Video Thumbnail" class="w-full h-full object-cover" />
+          <button
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-[#25B8AF] text-white flex items-center justify-center text-3xl opacity-90 hover:opacity-100 transition shadow-2xl">
+            <i class="fas fa-play ml-1"></i>
+          </button>
+        </div>
+
+        <div
+          class="bg-[#519DBC] p-10 md:p-16 lg:p-20 text-white relative overflow-hidden min-h-[450px] flex flex-col justify-center">
+          <div
+            class="absolute top-0 right-0 w-full h-full bg-[url('./assets/leaves.png')] bg-no-repeat bg-right-top bg-contain opacity-10 pointer-events-none">
+          </div>
+
+          <h2 class="text-4xl md:text-5xl lg:text-[60px] font-bold mb-10 relative z-10 leading-tight">
+            Ready To Glow<br class="hidden md:inline" />With Us
+          </h2>
+
+          <form class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 relative z-10">
+            <input type="text" placeholder="Name"
+              class="bg-transparent border-b border-white py-3 focus:outline-none focus:border-b-2 placeholder-white text-white text-lg" />
+
+            <input type="email" placeholder="Email"
+              class="bg-transparent border-b border-white py-3 focus:outline-none focus:border-b-2 placeholder-white text-white text-lg" />
+
+            <select
+              class="bg-transparent border-b border-white py-3 focus:outline-none focus:border-b-2 text-white text-lg appearance-none cursor-pointer">
+              <option value="" disabled selected className="text-gray-400 bg-[#519DBC]">Date Appointment</option>
+              <option value="Oct20" className="text-gray-800 bg-white">October 20</option>
+              <option value="Oct21" className="text-gray-800 bg-white">October 21</option>
+            </select>
+
+            <select
+              class="bg-transparent border-b border-white py-3 focus:outline-none focus:border-b-2 text-white text-lg appearance-none cursor-pointer">
+              <option value="" disabled selected className="text-gray-400 bg-[#519DBC]">Type of Service</option>
+              <option value="Facial" className="text-gray-800 bg-white">Facial</option>
+              <option value="Laser" className="text-gray-800 bg-white">Laser</option>
+              <option value="Consultation" className="text-gray-800 bg-white">Consultation</option>
+            </select>
+
+            <div class="sm:col-span-2 mt-6">
+              <button type="submit"
+                class="border-b-2 border-white uppercase text-base font-semibold tracking-widest pb-1 hover:border-b-4 transition-all duration-300">
+                Book Now →
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 lg:py-28 bg-[#EEF5F8]">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-[#25B8AF] text-xl lg:text-2xl uppercase tracking-widest font-light mb-2">
+        Testimonials
+      </p>
+      <h3 class="text-4xl md:text-5xl lg:text-[60px] text-[#1A1A1A] font-bold mb-16 pt-4">
+        From Our Satisfied Clients
+      </h3>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
+        <div class="flex justify-center mb-6">
+          <img src="./assets/testi-icons.png" alt="Client Avatar"
+            class="w-24 h-24 rounded-full object-cover border-4 border-[#25B8AF] shadow-md" />
+        </div>
+
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 max-w-3xl mx-auto italic">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat."
+        </p>
+
+        <div class="flex justify-center space-x-1 mb-6">
+          <i class="fas fa-star text-yellow-400 text-xl"></i>
+          <i class="fas fa-star text-yellow-400 text-xl"></i>
+          <i class="fas fa-star text-yellow-400 text-xl"></i>
+          <i class="fas fa-star text-yellow-400 text-xl"></i>
+          <i class="fas fa-star text-gray-300 text-xl"></i>
+        </div>
+
+        <p class="text-[#519DBC] text-xl lg:text-2xl font-semibold mb-1">
+          Laura Johnson
+        </p>
+        <p class="text-sm uppercase text-[#25B8AF] tracking-widest font-medium">
+          Facial Treatment Client
+        </p>
+      </div>
+
+      <div class="flex justify-center space-x-3 mt-10">
+        <span class="w-10 h-2 rounded-full bg-[#25B8AF]"></span> <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row text-center md:text-left justify-between items-center mb-16">
+        <div>
+          <p class="text-[#25B8AF] text-xl lg:text-2xl uppercase tracking-widest font-light mb-2">Featured Post</p>
+          <h3 class="text-4xl md:text-5xl lg:text-[60px] text-[#1A1A1A] font-bold">From Our Blog</h3>
+        </div>
+        <a href="#"
+          class="mt-6 md:mt-0 px-8 py-3 border-2 border-[#519DBC] text-[#519DBC] rounded-full font-semibold hover:bg-[#519DBC] hover:text-white transition duration-300">
+          DISCOVER MORE <i class="fas fa-arrow-right ml-2 text-sm"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div
+          class="lg:col-span-2 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+          <img src="./assets/blogs-i.png" alt="Blog Post Image" class="w-full h-80 object-cover">
+          <div class="p-8">
+            <h4 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 leading-snug">Unlocking The Secrets To Glowing
+              Skin: Essential Skincare Tips</h4>
+            <p class="text-gray-600 mb-6 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between text-sm">
+              <div class="text-gray-500 font-medium">
+                <span>Neville Bright</span>
+                <span class="mx-2 text-gray-400">|</span>
+                <span>30 January 2024</span>
+              </div>
+              <a href="#"
+                class="mt-4 sm:mt-0 inline-flex items-center px-6 py-2 bg-[#25B8AF] text-white rounded-full font-medium hover:bg-teal-600 transition">Tips
+                <i class="fas fa-arrow-right ml-2 text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-1 space-y-8">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+            <img src="./assets/blogs-ih.png" alt="Sidebar Blog Image" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Revealing The Beauty Within ...</h4>
+              <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                <span>Neville Bright</span>
+                <span class="mx-2 text-gray-400">|</span>
+                <span>30 January 2024</span>
+              </div>
+              <a href="#"
+                class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-600 rounded-full font-medium hover:bg-gray-200 transition text-sm">Treatment
+                <i class="fas fa-arrow-right ml-2 text-xs"></i>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+            <img src="./assets/blogs-m.png" alt="Sidebar Blog Image" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-800 mb-2">The New Agent Of Skincare In ...</h4>
+              <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                <span>Neville Bright</span>
+                <span class="mx-2 text-gray-400">|</span>
+                <span>30 January 2024</span>
+              </div>
+              <a href="#"
+                class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-600 rounded-full font-medium hover:bg-gray-200 transition text-sm">Skincare
+                <i class="fas fa-arrow-right ml-2 text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#519DBC] text-white py-16 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 lg:gap-8 items-start">
+
+        <div class="lg:col-span-2">
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center bg-white text-[#519DBC] rounded-full shadow-lg">
+              <i class="fas fa-spa text-xl"></i>
+            </div>
+            <h1 class="text-3xl font-bold tracking-wider">APHRODITE</h1>
+          </div>
+          <p class="text-white text-base leading-relaxed opacity-80 max-w-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-5">We're Open At</h3>
+          <ul class="space-y-3 text-base opacity-90">
+            <li class="flex items-start space-x-3">
+              <i class="far fa-clock text-white mt-1"></i>
+              <span>Monday - Friday: <span class="font-semibold">09:00 AM - 20:00 PM</span></span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="far fa-clock text-white mt-1"></i>
+              <span>Saturday - Sunday: <span class="font-semibold">09:00 AM - 18:00 PM</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-5">Get In Touch</h3>
+          <ul class="space-y-3 text-base opacity-90">
+            <li class="flex items-start space-x-3">
+              <i class="fas fa-envelope text-white mt-1"></i>
+              <span>info@8pxstudio.com</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="fas fa-map-marker-alt text-white mt-1"></i>
+              <span>Victoria Street, London, United Steed</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/30 my-10"></div>
+
+      <div
+        class="flex flex-col sm:flex-row justify-between items-center text-sm text-white opacity-80 space-y-4 sm:space-y-0">
+
+        <div class="flex space-x-6 text-base font-semibold">
+          <a href="#" class="hover:opacity-100 transition">Facebook</a>
+          <a href="#" class="hover:opacity-100 transition">Instagram</a>
+          <a href="#" class="hover:opacity-100 transition">LinkedIn</a>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+          <div>
+            Copyright &copy; 2025 Aphrodite. All Rights Reserved.
+          </div>
+          <a href="#" class="border-b border-white/50 hover:opacity-100 transition">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
